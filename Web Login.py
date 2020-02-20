@@ -96,17 +96,23 @@ class Login_Thread(threading.Thread):
                                 # change the username and password to the required one
                                 print("Trying To Login")
                                 # select usnername field
-                                element = driver.find_element_by_id("Ending id of user input field")
+                                element = driver.find_element_by_id(
+                                    "Ending id of user input field"
+                                )
                                 print("User Found")
                                 element.send_keys("Enter username")
                                 print("User Inputted")
                                 # select password field
-                                element = driver.find_element_by_id("Ending id of password input field")
+                                element = driver.find_element_by_id(
+                                    "Ending id of password input field"
+                                )
                                 print("Passwprd Found")
                                 element.send_keys("Enter password")
                                 print("Password Inputted")
                                 # select submit button
-                                element = driver.find_element_by_id("Enter id of submit button")
+                                element = driver.find_element_by_id(
+                                    "Enter id of submit button"
+                                )
                                 print("Button Found")
                                 element.click()
                                 print("Logged In\n")
@@ -167,8 +173,8 @@ class Login_Thread(threading.Thread):
                         type(ex).__name__, ex.args
                     )
                 )
-            # print("\n" + "ended")
-
+            finally:
+                print("Login Thread Exited")
     def get_id(self):
         """ 
             Returns id of the respective thread. 
