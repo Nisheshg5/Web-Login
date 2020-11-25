@@ -267,7 +267,7 @@ class Update_Thread(threading.Thread):
                             "https://chromedriver.storage.googleapis.com/index.html?path="
                             + nextVersion
                         )
-                        update_driver.set_page_load_timeout(5)
+                        update_driver.set_page_load_timeout(10)
                         update_driver.delete_all_cookies()
                         update_driver.get(chromeDriverURL)
                         print("~~~Update Website Got")

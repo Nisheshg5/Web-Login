@@ -1,8 +1,4 @@
-# Ignore all log files
 *.log
-
-# Ignore all text files
 *.txt
-
-# Ignore __pycache__ directory
 *__pycache__*
+*.vscode*
